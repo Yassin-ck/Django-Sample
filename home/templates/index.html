@@ -1,0 +1,55 @@
+{% extends 'theme.html' %}
+
+{% block content%}
+<div class='container text-center'>
+<h1 class='text-center ' style='text-decoration:underline'>Products</h1>
+</div>
+<div class='container col-12 '>
+    <div class='row gap-5'>
+    {% for product in productss %}
+
+    <div class="card col-6 " style="width: 18rem; ">
+        <img src="{{product.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{product.name}}</h3>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">${{product.price}}</li>
+        </ul>
+      
+            <button type="button" class="btn btn-secondary mb-2">shop now</button>
+
+    </div>
+   
+ 
+      {% endfor %}
+   
+    </div>
+    <br></br>
+</div>
+<div class='container col-12 mb-5'>
+<div class='row gap-5'>
+  <div class='container text-center'>
+  <h1 style='text-decoration:underline '>Sales Report</h1>
+  </div>
+{% for sales in saless %}
+
+<div class="card col-6 " style="width: 18rem; ">
+
+    <div class="card-body">
+      <h1 class="card-title">Sales: {{sales.sale}}</h1>
+      <h3 class="card-title " >Damage : {{sales.damage}}</h3>
+      <p class="card-text"></p>
+    </div>
+   
+  
+
+</div>
+
+  
+  {% endfor %}
+</div>
+</div>
+
+ {% endblock %}

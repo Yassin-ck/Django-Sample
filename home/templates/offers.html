@@ -1,0 +1,37 @@
+{% extends 'theme.html' %}
+
+{% block content%}
+<div class='container text-center'>
+<h1 class='text-center ' style='text-decoration:underline'>Offers</h1>
+</div>
+<div class='container col-12 '>
+    <div class='row gap-5'>
+    {% for offer in offerss %}
+    {% comment %} <div class='col-md-3'> {% endcomment %}
+    <div class="card col-6 " style="width: 18rem; ">
+      
+        <div class="card-body">
+          <h1 class="card-title">{{offer.code}}</h1>
+          <h3 class="card-title">{{offer.discription}}</h3>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">${{offer.discount}}</li>
+        </ul>
+      
+            <button type="button" class="btn btn-secondary mb-2">shop now</button>
+
+    </div>
+      {% comment %} </div> {% endcomment %}
+      {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+ {% endblock %}
