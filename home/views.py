@@ -13,4 +13,4 @@ def offers(request):
     return render(request,'offers.html',{'offerss':offers})
     # return HttpResponse('<h1>About Page</h1>')
 def contact(request):
-    return HttpResponse('<h1>Contact Page</h1>')
+    return render(request,'index2.html')

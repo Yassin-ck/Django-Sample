@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Product,Offer,Sales
 
 class ProductAdmin(admin.ModelAdmin):
-        list_display = ('name','price','stock')
+        list_display = ('name','stock','price')
 class OfferAdmin(admin.ModelAdmin):
         list_display = ('code','discount')
 class SalesAdmin(admin.ModelAdmin):
